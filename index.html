@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/dropay-logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DroPay -  მთავარი</title>
+    <!-- Font Awesome 6 (უახლესი ვერსია) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/chatbot.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                   <a href="#home"><img href="" src="images/dropay-logo.png" alt="DroPay Logo" class="logo-image"></a>
+
+                <h1><span>Pay</span></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home" data-i18n="home">მთავარი</a></li>
+                    <li><a href="#features" data-i18n="features">ფუნქციები</a></li>
+                    <li><a href="sesxis.html" data-i18n="request">გადახდის მოთხოვნა</a></li>
+                    <li><a href="#contact" data-i18n="contact">კონტაქტი</a></li>
+                    <li><a href="about.html" data-i18n="about us">ჩვენ შესახებ</a></li>
+                    <li><a href="reg.html" data-i18n="reg"><span class="icon-circle"><i class="fa-regular fa-user"></i></span></a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="languageToggle" class="language-toggle" aria-label="Change language">
+                    <span class="language-icon">EN</span>
+                </button>
+                <button id="headerDarkModeToggle" class="header-dark-mode-toggle" aria-label="Toggle dark mode">
+                    <span class="dark-icon">🤘🏻</span>
+                    <span class="light-icon">☀️</span>
+                </button>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 data-i18n="heroTitle">სასწრაფო გადახდის მოთხოვნა ერთი დაწკაპუნებით</h2>
+                <p data-i18n="heroSubtitle">როდესაც დრო ან ტექნიკური პრობლემა გიშლით ხელს, DroPay მზადაა დაგეხმაროთ</p>
+                <a href="sesxis.html" class="btn btn-primary" data-i18n="requestButton">გადახდის მოთხოვნა</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/payment.png" alt="Payment Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title" data-i18n="whyChoose">რატომ ავირჩიოთ DroPay?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 data-i18n="fast">სწრაფი</h3>
+                    <p data-i18n="fastDesc">გადახდის მოთხოვნები წამებში გაიგზავნება</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 data-i18n="secure">უსაფრთხო</h3>
+                    <p data-i18n="secureDesc">დაცული კომუნიკაცია და მონაცემთა დაშიფვრა</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3 data-i18n="versatile">მრავალფეროვანი</h3>
+                    <p data-i18n="versatileDesc">მუშაობს ყველა ბანკთან და გადახდის სისტემასთან</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Chatbot Elements -->
+<button id="chatbot-toggle" aria-label="Open chatbot">
+    <span>💬</span>
+</button>
+
+<div id="chatbot-container" class="chatbot-container" style="display: none;">
+    <div class="chatbot-header">
+        <h3>DroPay Assistant</h3>
+        <button id="close-chatbot" class="chatbot-close" aria-label="Close chatbot">×</button>
+    </div>
+    <div id="chatbot-messages" class="chatbot-body">
+        <div id="typing-indicator" style="display: none;">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+        </div>
+    </div>
+    <div class="chatbot-input">
+        <input type="text" id="chatbot-input-field" placeholder="Type your message...">
+        <button id="send-message-btn" aria-label="Send message">➤</button>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="images/dropay-logo.png" alt="DroPay Logo" class="logo-image">
+                        <h1>Dro<span>Pay</span></h1>
+                    </div>
+                    <p data-i18n="footerText">სასწრაფო გადახდის მოთხოვნის სერვისი</p>
+                </div>
+                <div class="footer-links">
+                    <h3 data-i18n="links">ბმულები</h3>
+                    <ul>
+                        <li><a href="#home" data-i18n="home">მთავარი</a></li>
+                        <li><a href="#features" data-i18n="features">ფუნქციები</a></li>
+                        <li><a href="#request" data-i18n="request">გადახდის მოთხოვნა</a></li>
+                        <li><a href="#contact" data-i18n="contact">კონტაქტი</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact" id="contact">
+                    <h3 data-i18n="contactTitle">კონტაქტი</h3>
+                    <ul>
+                        <li>ელ.ფოსტა: info@dropay.ge</li>
+                        <li>ტელ: +995 123 456 789</li>
+                        <li data-i18n="address">მისამართი: თბილისი, საქართველო</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DroPay. <span data-i18n="copyright">ყველა უფლება დაცულია.</span></p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61576938367905" aria-label="Facebook"><i>f</i></a>
+                    <a href="#" aria-label="Twitter"><i>t</i></a>
+                    <a href="#" aria-label="LinkedIn"><i>in</i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

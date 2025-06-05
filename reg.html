@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/dropay-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DroPay - რეგისტრაცია</title>
+    <!-- Font Awesome 6 (უახლესი ვერსია) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/chatbot.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                   <a href="index.html#home"><img href="" src="images/dropay-logo.png" alt="DroPay Logo" class="logo-image"></a>
+                <h1><span>Pay</span></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="home">მთავარი</a></li>
+                    <li><a href="index.html#features" data-i18n="features">ფუნქციები</a></li>
+                    <li><a href="sesxis.html" data-i18n="request">გადახდის მოთხოვნა</a></li>
+                    <li><a href="index.html#contact" data-i18n="contact">კონტაქტი</a></li>
+                    <li><a href="about.html" data-i18n="about us">ჩვენ შესახებ</a></li>
+                    <li><a href="reg.html" data-i18n="reg"><span class="icon-circle"><i class="fa-regular fa-user"></i></span></a></li>
+
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="languageToggle" class="language-toggle" aria-label="Change language">
+                    <span class="language-icon">EN</span>
+                </button>
+                <button id="headerDarkModeToggle" class="header-dark-mode-toggle" aria-label="Toggle dark mode">
+                    <span class="dark-icon">🤘🏻</span>
+                    <span class="light-icon">☀️</span>
+                </button>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Auth Container -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>DroPay</h2>
+                <p>დროებითი გადახდების პლატფორმა</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="login-tab">შესვლა</div>
+                <div class="auth-tab" id="register-tab">რეგისტრაცია</div>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">ელ.ფოსტა ან ტელეფონი</label>
+                    <input type="text" id="login-email" required>
+                    <div class="error-message" id="login-email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">პაროლი</label>
+                    <input type="password" id="login-password" required>
+                    <div class="error-message" id="login-password-error"></div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">შესვლა</button>
+                
+                <div class="auth-footer">
+                    <a href="#" id="forgot-password">დაგავიწყდა პაროლი?</a>
+                </div>
+            </form>
+            
+            <!-- Registration Form -->
+            <form id="register-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label for="register-first-name">სახელი</label>
+                    <input type="text" id="register-first-name" required>
+                    <div class="error-message" id="register-first-name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-last-name">გვარი</label>
+                    <input type="text" id="register-last-name" required>
+                    <div class="error-message" id="register-last-name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-personal-id">პირადი ნომერი</label>
+                    <input type="text" id="register-personal-id" required>
+                    <div class="error-message" id="register-personal-id-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-email">ელ.ფოსტა</label>
+                    <input type="email" id="register-email" required>
+                    <div class="error-message" id="register-email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-phone">ტელეფონის ნომერი</label>
+                    <input type="tel" id="register-phone" required>
+                    <div class="error-message" id="register-phone-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-password">პაროლი</label>
+                    <input type="password" id="register-password" required>
+                    <div class="error-message" id="register-password-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-confirm-password">გაიმეორეთ პაროლი</label>
+                    <input type="password" id="register-confirm-password" required>
+                    <div class="error-message" id="register-confirm-password-error"></div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">რეგისტრაცია</button>
+                
+                <div class="auth-footer">
+                    უკვე გაქვთ ანგარიში? <a href="#" id="show-login">შესვლა</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching
+            const loginTab = document.getElementById('login-tab');
+            const registerTab = document.getElementById('register-tab');
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            
+            loginTab.addEventListener('click', function() {
+                loginTab.classList.add('active');
+                registerTab.classList.remove('active');
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            });
+            
+            registerTab.addEventListener('click', function() {
+                registerTab.classList.add('active');
+                loginTab.classList.remove('active');
+                registerForm.style.display = 'block';
+                loginForm.style.display = 'none';
+            });
+            
+            document.getElementById('show-login').addEventListener('click', function(e) {
+                e.preventDefault();
+                loginTab.click();
+            });
+            
+            // Form validation and submission
+            document.getElementById('login-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+                
+                // Simple validation
+                let isValid = true;
+                
+                if (!email) {
+                    showError('login-email-error', 'გთხოვთ შეიყვანეთ ელ.ფოსტა ან ტელეფონი');
+                    isValid = false;
+                } else {
+                    hideError('login-email-error');
+                }
+                
+                if (!password) {
+                    showError('login-password-error', 'გთხოვთ შეიყვანეთ პაროლი');
+                    isValid = false;
+                } else {
+                    hideError('login-password-error');
+                }
+                
+                if (isValid) {
+                    // Simulate API call
+                    simulateLogin(email, password);
+                }
+            });
+            
+            document.getElementById('register-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const firstName = document.getElementById('register-first-name').value;
+                const lastName = document.getElementById('register-last-name').value;
+                const personalId = document.getElementById('register-personal-id').value;
+                const email = document.getElementById('register-email').value;
+                const phone = document.getElementById('register-phone').value;
+                const password = document.getElementById('register-password').value;
+                const confirmPassword = document.getElementById('register-confirm-password').value;
+                
+                // Validation
+                let isValid = true;
+                
+                if (!firstName) {
+                    showError('register-first-name-error', 'გთხოვთ შეიყვანეთ სახელი');
+                    isValid = false;
+                } else {
+                    hideError('register-first-name-error');
+                }
+                
+                if (!lastName) {
+                    showError('register-last-name-error', 'გთხოვთ შეიყვანეთ გვარი');
+                    isValid = false;
+                } else {
+                    hideError('register-last-name-error');
+                }
+                
+                if (!personalId || !/^\d{11}$/.test(personalId)) {
+                    showError('register-personal-id-error', 'გთხოვთ შეიყვანეთ სწორი პირადი ნომერი');
+                    isValid = false;
+                } else {
+                    hideError('register-personal-id-error');
+                }
+                
+                if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+                    showError('register-email-error', 'გთხოვთ შეიყვანეთ სწორი ელ.ფოსტა');
+                    isValid = false;
+                } else {
+                    hideError('register-email-error');
+                }
+                
+                if (!phone || !/^5\d{8}$/.test(phone)) {
+                    showError('register-phone-error', 'გთხოვთ შეიყვანეთ სწორი ტელეფონის ნომერი');
+                    isValid = false;
+                } else {
+                    hideError('register-phone-error');
+                }
+                
+                if (!password || password.length < 6) {
+                    showError('register-password-error', 'პაროლი უნდა შედგებოდეს მინიმუმ 6 სიმბოლოსგან');
+                    isValid = false;
+                } else {
+                    hideError('register-password-error');
+                }
+                
+                if (password !== confirmPassword) {
+                    showError('register-confirm-password-error', 'პაროლები არ ემთხვევა');
+                    isValid = false;
+                } else {
+                    hideError('register-confirm-password-error');
+                }
+                
+                if (isValid) {
+                    // Simulate API call
+                    simulateRegistration({
+                        firstName,
+                        lastName,
+                        personalId,
+                        email,
+                        phone,
+                        password
+                    });
+                }
+            });
+            
+            function showError(elementId, message) {
+                const element = document.getElementById(elementId);
+                element.textContent = message;
+                element.style.display = 'block';
+            }
+            
+            function hideError(elementId) {
+                const element = document.getElementById(elementId);
+                element.style.display = 'none';
+            }
+            
+            // Simulate API calls
+            function simulateLogin(email, password) {
+                console.log('Login attempt with:', email, password);
+                // In a real app, you would make a fetch request to your backend
+                // fetch('/api/login', { method: 'POST', body: JSON.stringify({ email, password }) })
+                
+                // For demo purposes, just show an alert
+                setTimeout(() => {
+                    alert('შესვლა წარმატებულია! (დემო)');
+                    // Redirect to dashboard in real app
+                    // window.location.href = '/dashboard';
+                }, 1000);
+            }
+            
+            function simulateRegistration(userData) {
+                console.log('Registration attempt with:', userData);
+                // In a real app, you would make a fetch request to your backend
+                // fetch('/api/register', { method: 'POST', body: JSON.stringify(userData) })
+                
+                // For demo purposes, just show an alert
+                setTimeout(() => {
+                    alert('რეგისტრაცია წარმატებულია! (დემო)');
+                    // Switch to login tab
+                    loginTab.click();
+                }, 1000);
+            }
+        });
+    </script>
+     <!-- Chatbot Elements -->
+<button id="chatbot-toggle" aria-label="Open chatbot">
+    <span>💬</span>
+</button>
+
+<div id="chatbot-container" class="chatbot-container" style="display: none;">
+    <div class="chatbot-header">
+        <h3>DroPay Assistant</h3>
+        <button id="close-chatbot" class="chatbot-close" aria-label="Close chatbot">×</button>
+    </div>
+    <div id="chatbot-messages" class="chatbot-body">
+        <div id="typing-indicator" style="display: none;">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+        </div>
+    </div>
+    <div class="chatbot-input">
+        <input type="text" id="chatbot-input-field" placeholder="Type your message...">
+        <button id="send-message-btn" aria-label="Send message">➤</button>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="images/dropay-logo.png" alt="DroPay Logo" class="logo-image">
+                        <h1>Dro<span>Pay</span></h1>
+                    </div>
+                    <p data-i18n="footerText">სასწრაფო გადახდის მოთხოვნის სერვისი</p>
+                </div>
+                <div class="footer-links">
+                    <h3 data-i18n="links">ბმულები</h3>
+                    <ul>
+                        <li><a href="#home" data-i18n="home">მთავარი</a></li>
+                        <li><a href="#features" data-i18n="features">ფუნქციები</a></li>
+                        <li><a href="#request" data-i18n="request">გადახდის მოთხოვნა</a></li>
+                        <li><a href="#contact" data-i18n="contact">კონტაქტი</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact" id="contact">
+                    <h3 data-i18n="contactTitle">კონტაქტი</h3>
+                    <ul>
+                        <li>ელ.ფოსტა: info@dropay.ge</li>
+                        <li>ტელ: +995 123 456 789</li>
+                        <li data-i18n="address">მისამართი: თბილისი, საქართველო</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DroPay. <span data-i18n="copyright">ყველა უფლება დაცულია.</span></p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61576938367905" aria-label="Facebook"><i>f</i></a>
+                    <a href="#" aria-label="Twitter"><i>t</i></a>
+                    <a href="#" aria-label="LinkedIn"><i>in</i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
